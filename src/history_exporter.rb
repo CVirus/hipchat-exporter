@@ -7,7 +7,7 @@ class HistoryExporter
 
   def initialize(room)
     @room = room
-    @client = HipChat::Client.new(ENV['HIPCHAT_TOKEN'])
+    @client = HipChat::Client.new(ENV['HIPCHAT_TOKEN'], :server_url => 'http://hipchat.zalando.net')
   end
 
   def perform(from: nil, to: nil)

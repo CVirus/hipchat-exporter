@@ -6,7 +6,7 @@ class RoomExporter
   attr_reader :client
 
   def initialize
-    @client = HipChat::Client.new(ENV['HIPCHAT_TOKEN'])
+    @client = HipChat::Client.new(ENV['HIPCHAT_TOKEN'], :server_url => 'http://hipchat.zalando.net')
   end
 
   def perform
