@@ -6,7 +6,7 @@ default: &default
   pool: 5
   username: root
   password:
-  host: 127.0.0.1
+  host: <%= ENV['HF_DB_HOST'] %>
   socket: /tmp/mysql.sock
   database: hipchat_exporter
 
